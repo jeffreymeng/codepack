@@ -1,6 +1,6 @@
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://jeffreymeng.github.io/basic.css">
 
 	<script>
@@ -8,22 +8,33 @@
 		function setup() {
 			$("#disclaimer").hide();
 			$("#disclaimershow").click(show);
-		}
+		};
 		function show() {
 			$("#disclaimer").show();
+			$("#hidedis").click(setup);
 
-		}
+		};
+		function jquery() {
+
+		};
+
 	</script>
 </head>
 <body>
 <div>
 	<h1>Code Pack</h1>
 	<p>code pack is a list the most common links used for html, css, and js.</p>
-	<p>Check the checkbox next to each link, then copy and padte the link into the &lt;head> section, right before the first &lt;body> tag</p>
-	<a id="disclaimershow" class="underline blue">General Disclaimer:(click to show)</a>
+
+	<a id="disclaimershow" class="underline blue">General Disclaimer:(click to show) Read and agree to before using code.</a>
 </div>
 	<div id="disclaimer">
-		<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garunty the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS - IS, without warranty of any kind, either express or implied. You may use all cdn code provided by codepack for any reason, weather comercial, or non-comercial and do not have to do for attribution.</p>
+		<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garunty the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, weather comercial, or non-comercial and do not have to do for attribution. The actual code that the cdn leads to is licensed under their respective owners.<br><a id="hidedis" class="blue underline">Hide</a></p>
+	</div>
+
+	<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
+
+	<div id="show">
+		<p class="content-box-gray">hi</p>
 	</div>
 </body>
 </html>
