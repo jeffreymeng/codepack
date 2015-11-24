@@ -1,7 +1,5 @@
 <html>
 <head>
-	<link href="http://jeffreymeng.github.io/css/prism.css" rel="stylesheet" />
-	<script src="http://jeffreymeng.github.io/js/prism.js"></script>
 
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -17,18 +15,6 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-	<script>
-	$(document).ready(setup);
-	function setup() {
-		$("#disclaimer").hide();
-		$("#disclaimershow").click(show);
-	};
-	function show() {
-		$("#disclaimer").show();
-		$("#hidedis").click(setup);
-
-	};
-	</script>
 	<script>
 	jQuery.fn.isChecked = function () {
 		if ("prop" in jQuery(this)) {
@@ -46,30 +32,63 @@
 		$('#get').click(function () {
 			var none = true
 			var cdn = ""
+			if (!($('#attribution').isChecked())) {
+				cdn = cdn + "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>"
+			}
 			if ($('#bootstrap').isChecked()) {
-				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>'
+				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Compiled and minified JS --><br>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">&lt;/script><br>'
 			}
 			if ($('#bootstrapcss').isChecked() && !($('#bootstrap').isChecked())) {
-				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br><br>'
+				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>'
 			}			
 			if ($('#bootstrapjs').isChecked() && !($('#bootstrap').isChecked())) {
-				cdn = cdn + "bootstrapjs<br>"
+				cdn = cdn + '&lt;!-- Bootstrap 3 Compiled and minified JS --><br>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">&lt;/script><br>'
 			}			
 			if ($('#bootstraptheme').isChecked() && !($('#bootstrap').isChecked())) {
-				cdn = cdn + "bootstraptheme<br>"
+				cdn = cdn + '&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>'
 			}
 			if ($('#jquery').isChecked()) {
-				cdn = cdn + "jquery<br>"
+				cdn = cdn + '&lt;!-- jQuery 2.1.4 minified --><br>&lt;script src="https://code.jquery.com/jquery-2.1.4.min.js">&lt;/script>'
 			}
-			if (cdn === "") {
-				cdn = cdn + "&lt;!-- You did not select anythng --><br>"
+			if ($('#jquerygoogle').isChecked()) {
+				cdn = cdn + '&lt;!-- jQuery 1.11.3 minified from Google--><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">&lt;/script><br>'
 			}
+			if ($('#jquerymicrosoft').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from Microsoft--><br>http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"
+			}
+			if ($('#jquerycdnjs').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from cdnjs--><br>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'>&lt;/script><br>"
+			}
+			if ($('#jqueryjsdelivr').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from jsdelivr--><br>&lt;script src='https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js'>&lt;/script><br>"
+			}
+
+			if ($('#jquery1').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified --><br>&lt;script src='https://code.jquery.com/jquery-1.11.3.min.js'>&lt;/script><br>"
+			}
+			if ($('#jquery1google').isChecked()) {
+				cdn = cdn + '&lt;!-- jQuery 1.11.3 minified from Google--><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<br>'
+			}
+			if ($('#jquery1microsoft').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from Microsoft --><br>&lt;script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js'>&lt;/script><br>"
+			}
+			if ($('#jquery1cdnjs').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from CDNJS--><br>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'>&lt;/script><br>"
+			}
+			if ($('#jquery1jsdelivr').isChecked()) {
+				cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from jsdelivr--><br>&lt;script src='https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js'>&lt;/script><br>"
+			}
+			if (cdn === "" || cdn === "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>") {
+				cdn = "&lt;!-- You did not select anythng --><br>"
+			}
+
 			$("#cdns").empty();
-			$("#cdns").append('<pre class="well"><code class="language-markup>"' + cdn + "</code></pre>")
+			$("#cdns").append('<pre class="well">' + cdn + "</pre>")
 		});
 
-	});
-	</script>
+});
+</script>
 
 </head>
 <body>
@@ -79,10 +98,11 @@
 				<h1>Code Pack</h1>
 				<p>code pack is a list the most common links used for html, css, and js.</p>
 
-				<a id="disclaimershow" class="underline blue">General Disclaimer:(click to show) Read and agree to before using code.</a>
+				<a data-toggle="collapse" data-target="#disclaimer" aria-expanded="false" aria-controls="disclaimer">Toggle Disclaimer(read and agree to before using)
+				</a>
 			</div>
-			<div id="disclaimer">
-				<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garuntey the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, whether comercial, or non-comercial and do not have to do anything for attribution. The actual code that the cdn leads to is licensed under their respective owners.<br><a id="hidedis" class="blue underline">Hide</a></p>
+			<div id="disclaimer" class="collapse">
+				<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garuntey the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, whether comercial, or non-comercial and do not have to do anything for attribution, though we would appreciate it if you kept the attribution header intact. However, The actual code that the cdn leads to is licensed under their respective owners.</p>
 			</div>
 
 			<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
@@ -91,52 +111,120 @@
 				<div>
 					<h4>Bootstrap</h4>
 					<input type="checkbox" id="bootstrap"/>
-					<label for="bootstrap">Bootstrap (JS, CSS, and optional theme) </label>
+					<label for="bootstrap">Bootstrap  (JS, CSS, and optional theme) <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
 					<a data-toggle="collapse" data-target="#extra" aria-expanded="false" aria-controls="extra">
 						Toggle individual components
 					</a>
 					<div id="extra" class="collapse">
+						<ul class="list-group">
+							<li class="list-group-item">
+								<div>
+									<input type="checkbox" id="bootstrapjs"/>
+									<label for="bootstrapjs">Bootstrap JS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+								</div>  
+							</li>
+							<li class="list-group-item">
+								<div>
+									<input type="checkbox" id="bootstrapcss"/>
+									<label for="bootstrapcss">Bootstrap CSS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+								</div>
+							</li>
+							<li class="list-group-item">    
+								<div>
+									<input type="checkbox" id="bootstraptheme"/>
+									<label for="bootstraptheme">Bootstrap additional theme <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+								</div>
+							</li>
+						</div>
+						<br><h4>jQuery</h4>
 						<div>
-							<input type="checkbox" id="bootstrapjs"/>
-							<label for="bootstrapjs">Bootstrap JS</label>
-						</div>    
-						<div>
-							<input type="checkbox" id="bootstrapcss"/>
-							<label for="bootstrapcss">Bootstrap CSS</label>
-						</div>    
-						<div>
-							<input type="checkbox" id="bootstraptheme"/>
-							<label for="bootstraptheme">Bootstrap additional theme</label>
+							<input type="checkbox" id="jquery"/>
+							<label for="jquery">jQuery 2.1.4 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label>
+							<a data-toggle="collapse" data-target="#extrajquery" aria-expanded="false" aria-controls="extrajquery"> Toggle other CDN providers </a>
+							<div id="extrajquery" class="collapse">
+								<ul class="list-group">
+									<li class="list-group-item"> 
+										<div>
+											<input type="checkbox" id="jquerygoogle"/>
+											<label for="jquerygoogle">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+										</div>    
+										<!-- <a href="">Website</a> | <a href=""> License </a> -->
+									</li>
+									<li class="list-group-item"> 
+										<div>
+											<input type="checkbox" id="jquerymicrosoft"/>
+											<label for="jquerymicrosoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+										</div> 
+									</li>
+									<li class="list-group-item">    
+										<div>
+											<input type="checkbox" id="jquerycdnjs"/>
+											<label for="jquerycdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/2.1.4">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+										</div>
+									</li>
+									<li class="list-group-item"> 
+										<div>
+											<input type="checkbox" id="jqueryjsdelivr"/>
+											<label for="jqueryjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+										</div>
+									</li>
+								</div>
+							</div>
+							<div>
+								<input type="checkbox" id="jquery1"/>
+								<label for="jquery1">jQuery 1.11.3 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label><a data-toggle="collapse" data-target="#extrajquery1" aria-expanded="false" aria-controls="extrajquery1"> Toggle other CDN providers </a>
+								<div id="extrajquery1" class="collapse">
+									<ul class="list-group">
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="jquery1google"/>
+												<label for="jquery1google">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+											</div> 
+										</li>
+										<li class="list-group-item">   
+											<!-- <a href="">Website</a> | <a href=""> License </a> -->
+											<div>
+												<input type="checkbox" id="jquery1microsoft"/>
+												<label for="jquery1microsoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+											</div> 
+										</li>
+										<li class="list-group-item">   
+											<div>
+												<input type="checkbox" id="jquery1cdnjs"/>
+												<label for="jquery1cdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/1.11.3">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="jquery1jsdelivr"/>
+												<label for="jquery1jsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+											</div>
+										</li>
+									</div>
+								</div>
+								<hr>
+								<div>
+									<input type="checkbox" id="attribution"/>
+									<label for="attribution"> Remove attribution header (you don't have to keep our attribution header, but we would appreciate it if you did by not checking it).</label>
+								</div>
+								<hr>
+								<button id="get" class="form-control btn" style="background-color:green;color:white;">Get the CDN code</button>
+								<hr>
+							</div>
 						</div>
 					</div>
-					<br><h4>jQuery</h4>
-					<div>
-						<input type="checkbox" id="jquery"/>
-						<label for="jquery">jQuery 2.1.4</label>
-					</div>
-					<div>
-						<input type="checkbox" id="jquery1"/>
-						<label for="jquery1">jQuery 2.1.4</label>
-					</div>
-					<hr>
-					<button id="get" class="form-control btn" style="background-color:green;color:white;">Get the CDN</button>
-					<hr>
+
+					<br>
+					<br>
+					<div id="cdns"><pre class="well">&lt;!-- Click the button above me to get your CDN code --></pre></div>
 				</div>
-
-
-
 			</div>
-
 		</div>
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted text-center">Copyright &copy; 2015 Jeffrey Meng</p>
+			</div>
+		</footer>
+	</body>
 
-		<div>
-
-		</div>
-		<br>
-			<br>
-			<div id="cdns"></div>
-		</div>
-	</div>
-</div>
-</body>
-</html>
+	</html>
