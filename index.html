@@ -1,40 +1,142 @@
 <html>
 <head>
+	<link href="http://jeffreymeng.github.io/css/prism.css" rel="stylesheet" />
+	<script src="http://jeffreymeng.github.io/js/prism.js"></script>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="http://jeffreymeng.github.io/basic.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="https://raw.githubusercontent.com/flatlogic/awesome-bootstrap-checkbox/master/awesome-bootstrap-checkbox.css" type="text/css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 	<script>
-		$(document).ready(setup);
-		function setup() {
-			$("#disclaimer").hide();
-			$("#disclaimershow").click(show);
-		};
-		function show() {
-			$("#disclaimer").show();
-			$("#hidedis").click(setup);
+	$(document).ready(setup);
+	function setup() {
+		$("#disclaimer").hide();
+		$("#disclaimershow").click(show);
+	};
+	function show() {
+		$("#disclaimer").show();
+		$("#hidedis").click(setup);
 
-		};
-		function jquery() {
-
-		};
-
+	};
 	</script>
+	<script>
+	jQuery.fn.isChecked = function () {
+		if ("prop" in jQuery(this)) {
+			return jQuery(this).prop('checked') == true ? true : false;
+
+		}
+		if ("attr" in jQuery(this)) {
+			return jQuery(this).attr('checked') == true ? true : false;
+		}
+		return jQuery(this).is(":checked") == true ? true : false;
+	};
+
+	jQuery(document).ready(function () {
+
+		$('#get').click(function () {
+			var none = true
+			var cdn = ""
+			if ($('#bootstrap').isChecked()) {
+				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>'
+			}
+			if ($('#bootstrapcss').isChecked() && !($('#bootstrap').isChecked())) {
+				cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br><br>'
+			}			
+			if ($('#bootstrapjs').isChecked() && !($('#bootstrap').isChecked())) {
+				cdn = cdn + "bootstrapjs<br>"
+			}			
+			if ($('#bootstraptheme').isChecked() && !($('#bootstrap').isChecked())) {
+				cdn = cdn + "bootstraptheme<br>"
+			}
+			if ($('#jquery').isChecked()) {
+				cdn = cdn + "jquery<br>"
+			}
+			if (cdn === "") {
+				cdn = cdn + "&lt;!-- You did not select anythng --><br>"
+			}
+			$("#cdns").empty();
+			$("#cdns").append('<pre class="well"><code class="language-markup>"' + cdn + "</code></pre>")
+		});
+
+	});
+	</script>
+
 </head>
 <body>
-<div>
-	<h1>Code Pack</h1>
-	<p>code pack is a list the most common links used for html, css, and js.</p>
+	<div class="container">
+		<div id="col-lg-12">
+			<div>
+				<h1>Code Pack</h1>
+				<p>code pack is a list the most common links used for html, css, and js.</p>
 
-	<a id="disclaimershow" class="underline blue">General Disclaimer:(click to show) Read and agree to before using code.</a>
+				<a id="disclaimershow" class="underline blue">General Disclaimer:(click to show) Read and agree to before using code.</a>
+			</div>
+			<div id="disclaimer">
+				<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garuntey the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, whether comercial, or non-comercial and do not have to do anything for attribution. The actual code that the cdn leads to is licensed under their respective owners.<br><a id="hidedis" class="blue underline">Hide</a></p>
+			</div>
+
+			<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
+
+			<div id="form">
+				<div>
+					<h4>Bootstrap</h4>
+					<input type="checkbox" id="bootstrap"/>
+					<label for="bootstrap">Bootstrap (JS, CSS, and optional theme) </label>
+					<a data-toggle="collapse" data-target="#extra" aria-expanded="false" aria-controls="extra">
+						Toggle individual components
+					</a>
+					<div id="extra" class="collapse">
+						<div>
+							<input type="checkbox" id="bootstrapjs"/>
+							<label for="bootstrapjs">Bootstrap JS</label>
+						</div>    
+						<div>
+							<input type="checkbox" id="bootstrapcss"/>
+							<label for="bootstrapcss">Bootstrap CSS</label>
+						</div>    
+						<div>
+							<input type="checkbox" id="bootstraptheme"/>
+							<label for="bootstraptheme">Bootstrap additional theme</label>
+						</div>
+					</div>
+					<br><h4>jQuery</h4>
+					<div>
+						<input type="checkbox" id="jquery"/>
+						<label for="jquery">jQuery 2.1.4</label>
+					</div>
+					<div>
+						<input type="checkbox" id="jquery1"/>
+						<label for="jquery1">jQuery 2.1.4</label>
+					</div>
+					<hr>
+					<button id="get" class="form-control btn" style="background-color:green;color:white;">Get the CDN</button>
+					<hr>
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+		<div>
+
+		</div>
+		<br>
+			<br>
+			<div id="cdns"></div>
+		</div>
+	</div>
 </div>
-	<div id="disclaimer">
-		<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garunty the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, weather comercial, or non-comercial and do not have to do for attribution. The actual code that the cdn leads to is licensed under their respective owners.<br><a id="hidedis" class="blue underline">Hide</a></p>
-	</div>
-
-	<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
-
-	<div id="show">
-		<p class="content-box-gray">hi</p>
-	</div>
 </body>
 </html>
