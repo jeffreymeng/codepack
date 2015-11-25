@@ -85,6 +85,15 @@ jQuery(document).ready(function () {
 	if ($('#angularjsdeliver').isChecked()) {
 		cdn = cdn + '&lt;!-- AngularJS from jsDelivr --><br>&lt;script src="https://cdn.jsdelivr.net/angularjs/1.4.7/angular.min.js">&lt;/script>'
 	}
+	if ($('#prototypejsgoogle').isChecked()) {
+		cdn = cdn + '&lt;!-- PrototypeJS from Google --><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js">&lt;/script>'
+	}	
+	if ($('#prototypejscdnjs').isChecked()) {
+		cdn = cdn + '&lt;!-- AngularJS from jsDelivr --><br>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.2/prototype.min.js">&lt;/script>'
+	}	
+	if ($('#prototypejsdelivr').isChecked()) {
+		cdn = cdn + '&lt;!-- AngularJS from jsDelivr --><br>&lt;script src="https://cdn.jsdelivr.net/prototypejs/1.7.2/prototype.js">&lt;/script><br>'
+	}	
 
 	if (cdn === "" || cdn === "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>") {
 		cdn = "&lt;!-- You did not select anythng --><br>"
