@@ -79,6 +79,12 @@ jQuery(document).ready(function () {
 	if ($('#angularjsgoogle').isChecked()) {
 		cdn = cdn + '&lt;!-- AngularJS from google --><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js">&lt;/script><br>'
 	}
+	if ($('#angularjscdnjs').isChecked()) {
+		cdn = cdn + '&lt;!-- AngularJS from CDNJS --><br>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.min.js">&lt;/script>'
+	}
+	if ($('#angularjsdeliver').isChecked()) {
+		cdn = cdn + '&lt;!-- AngularJS from jsDelivr --><br>&lt;script src="https://cdn.jsdelivr.net/angularjs/1.4.7/angular.min.js">&lt;/script>'
+	}
 
 	if (cdn === "" || cdn === "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>") {
 		cdn = "&lt;!-- You did not select anythng --><br>"
