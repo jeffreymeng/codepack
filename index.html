@@ -2,18 +2,7 @@
 <html lang="en">
 
 <head>
-	<script language="JavaScript">
-	function copyit(theField) {
-		var selectedText = document.selection;
-		if (selectedText.type == 'Text') {
-			var newRange = selectedText.createRange();
-			theField.focus();
-			theField.value = newRange.text;
-		} else {
-			alert('select a text in the page and then press this button');
-		}
-	}
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,25 +42,25 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">Bootstrap</a>
+					<a href="#bootstrap">Bootstrap</a>
 				</li>
 				<li>
-					<a href="#">jQuery</a>
+					<a href="#jquery">jQuery</a>
 				</li>
 				<li>
-					<a href="#">Overview</a>
+					<a href="#mootools">Mootools</a>
 				</li>
 				<li>
-					<a href="#">Events</a>
+					<a href="#angularjs">Angular JS</a>
 				</li>
 				<li>
-					<a href="#">About</a>
+					<a href="#">placeholder</a>
 				</li>
 				<li>
-					<a href="#">Services</a>
+					<a href="#">placeholder</a>
 				</li>
 				<li>
-					<a href="#">Contact</a>
+					<a href="#">placeholder</a>
 				</li>
 			</ul>
 		</div>
@@ -83,13 +72,16 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div data-spy="affix">
-							<button href="#menu-toggle" id="menu-toggle" class="btn btn-sucuess" style="background-color:transparent;margin-top:15px;"><span class="glyphicon glyphicon-menu-hamburger
+							<button href="#menu-toggle" id="menu-toggle" class="btn btn-sucuess" style="background-color:white;margin-top:15px;"><span class="glyphicon glyphicon-menu-hamburger
 								"  aria-hidden="true"></span> Toggle menu</button></div>
 								<br>
 								<br>
 								<div>
 									<h1>Code Pack</h1>
 									<p>code pack is a list the most common links used for html, css, and js.</p>
+									<!-- Target -->
+									 <!-- 1. Define some markup -->
+
 
 									<a data-toggle="collapse" data-target="#disclaimer" aria-expanded="false" aria-controls="disclaimer">Toggle Disclaimer(read and agree to before using)
 									</a>
@@ -99,10 +91,10 @@
 								</div>
 
 								<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
-
 								<div id="form">
 									<div>
-										<h4>Bootstrap</h4>
+										<a name="bootstrap"></a>
+										<h3>Bootstrap</h3>
 										<input type="checkbox" id="bootstrap"/>
 										<label for="bootstrap">Bootstrap  (JS, CSS, and optional theme) <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
 										<a data-toggle="collapse" data-target="#extra" aria-expanded="false" aria-controls="extra">
@@ -129,7 +121,9 @@
 													</div>
 												</li>
 											</div>
-											<br><h4>jQuery</h4>
+											<a name="jquery"></a>
+
+											<br><h3>jQuery</h3>
 											<div>
 												<input type="checkbox" id="jquery"/>
 												<label for="jquery">jQuery 2.1.4 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label>
@@ -194,17 +188,12 @@
 															</li>
 														</div>
 													</div>
+													<a name="mootools"></a>
 													<h3>Moo Tools</h3>
-													<label>Moo Tools 1.5.2 <a href="http://mootools.net"> Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label><a data-toggle="collapse" data-target="#extramootools" aria-expanded="false" aria-controls="extramootools"> Toggle all CDN providers(Mootools does not have it's own CDN.) </a>
+													<input type="checkbox" id="mootoolsgoogle"/>
+													<label for="mootoolsgoogle"> Moo Tools 1.5.2 from Google host( <a href="https://developers.google.com/speed/libraries/#angularjs">website</a> ) because Mootools does not have it's own cdn)<a href="http://mootools.net"> Mootools Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label><a data-toggle="collapse" data-target="#extramootools" aria-expanded="false" aria-controls="extramootools"> Toggle more CDN providers</a>
 													<div id="extramootools" class="collapse">
 														<ul class="list-group">
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="mootoolsgoogle"/>
-																	<label for="mootoolsgoogle">Google CDN <a href="https://developers.google.com/speed/libraries/#mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label>
-																</div> 
-															</li>
-
 															<li class="list-group-item">   
 																<div>
 																	<input type="checkbox" id="mootoolscdnjs"/>
@@ -214,7 +203,32 @@
 															<li class="list-group-item">
 																<div>
 																	<input type="checkbox" id="mootoolsjsdelivr"/>
-																	<label for="mootoolsjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a>
+																	<label for="mootoolsjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a>
+																</div>
+															</li>
+														</div>
+														<a name="angularjs"></a>
+													<h3>Angular JS</h3>
+													<input type="checkbox" id="angularjs"/>
+													<label for="angularjs"> AngularJS 1.4.2<a href="http://angularjs.org"> Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label><a data-toggle="collapse" data-target="#extraangularjs" aria-expanded="false" aria-controls="extraangularjs"> Toggle more CDN providers</a>
+													<div id="extraangularjs" class="collapse">
+														<ul class="list-group">
+															<li class="list-group-item">   
+																<div>
+																	<input type="checkbox" id="angularjsgoogle"/>
+																	<label for="angularjsgoogle">Google CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
+																</div>
+															</li>
+															<li class="list-group-item">   
+																<div>
+																	<input type="checkbox" id="angularjscdnjs"/>
+																	<label for="angularjscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
+																</div>
+															</li>
+															<li class="list-group-item">
+																<div>
+																	<input type="checkbox" id="angularjsjsdelivr"/>
+																	<label for="angularjsjedelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a>
 																</div>
 															</li>
 														</div>
@@ -246,104 +260,14 @@
 
 				<!-- jQuery -->
 				<script src="js/jquery.js"></script>
+				<script src="js/check.js"></script>
 
 				<!-- Bootstrap Core JavaScript -->
 				<script src="js/bootstrap.min.js"></script>
-
-				<!-- Menu Toggle Script -->
-				<script>
-				$("#menu-toggle").click(function(e) {
-					e.preventDefault();
-					$("#wrapper").toggleClass("toggled");
-				});
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.Core.min.js">
 				</script>
-				<script>    jQuery.fn.isChecked = function () {
-					if ("prop" in jQuery(this)) {
-						return jQuery(this).prop('checked') == true ? true : false;
+				<!-- Trigger -->
 
-					}
-					if ("attr" in jQuery(this)) {
-						return jQuery(this).attr('checked') == true ? true : false;
-					}
-					return jQuery(this).is(":checked") == true ? true : false;
-				};
-
-				jQuery(document).ready(function () {
-
-					$('#get').click(function () {
-						var none = true
-						var cdn = ""
-						if (!($('#attribution').isChecked())) {
-							cdn = cdn + "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>"
-						}
-						if ($('#bootstrap').isChecked()) {
-							cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>&lt;!-- Bootstrap 3 Compiled and minified JS --><br>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">&lt;/script><br>'
-						}
-						if ($('#bootstrapcss').isChecked() && !($('#bootstrap').isChecked())) {
-							cdn = cdn + '&lt;!-- Bootstrap 3 CSS --><br>&ltlink href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"><br>'
-						}           
-						if ($('#bootstrapjs').isChecked() && !($('#bootstrap').isChecked())) {
-							cdn = cdn + '&lt;!-- Bootstrap 3 Compiled and minified JS --><br>&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous">&lt;/script><br>'
-						}           
-						if ($('#bootstraptheme').isChecked() && !($('#bootstrap').isChecked())) {
-							cdn = cdn + '&lt;!-- Bootstrap 3 Optional theme --><br>&lt;link rel="stylesheet" href="https://maxcdn.botstrapcdn.com/bootstrap/3.3.3/js/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous"><br>'
-						}
-						if ($('#jquery').isChecked()) {
-							cdn = cdn + '&lt;!-- jQuery 2.1.4 minified --><br>&lt;script src="https://code.jquery.com/jquery-2.1.4.min.js">&lt;/script><br>'
-						}
-						if ($('#jquerygoogle').isChecked()) {
-							cdn = cdn + '&lt;!-- jQuery 1.11.3 minified from Google--><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">&lt;/script><br>'
-						}
-						if ($('#jquerymicrosoft').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from Microsoft--><br>&lt;script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js'>&lt;/script><br>"
-						}
-						if ($('#jquerycdnjs').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from cdnjs--><br>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'>&lt;/script><br>"
-						}
-						if ($('#jqueryjsdelivr').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from jsdelivr--><br>&lt;script src='https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js'>&lt;/script><br>"
-						}
-
-						if ($('#jquery1').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified --><br>&lt;script src='https://code.jquery.com/jquery-1.11.3.min.js'>&lt;/script><br>"
-						}
-						if ($('#jquery1google').isChecked()) {
-							cdn = cdn + '&lt;!-- jQuery 1.11.3 minified from Google--><br>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">&lt;/script><br>'
-						}
-						if ($('#jquery1microsoft').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from Microsoft --><br>&lt;script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js'>&lt;/script><br>"
-						}
-						if ($('#jquery1cdnjs').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from CDNJS--><br>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'>&lt;/script><br>"
-						}
-						if ($('#jquery1jsdelivr').isChecked()) {
-							cdn = cdn + "&lt;!-- jQuery 1.11.3 minified from jsdelivr--><br>&lt;script src='https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js'>&lt;/script><br>"
-						}
-						if ($('#mootoolsgoogle').isChecked()) {
-							cdn = cdn + '&lt;script src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.2/mootools.min.js">&lt;/script>'
-
-						}
-						if ($('#nootoolscdnjs').isChecked()) {
-							cdn = cdn + '&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.2/mootools-core-compat.min.js">&lt;/script>'
-
-						}
-						if ($('#mootoolsjsdelivr').isChecked()) {
-							cdn = cdn + '&lt;script src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.2/mootools.min.js">&lt;/script>'
-
-						}
-						if ($('#mootoolsgoogle').isChecked()) {
-							cdn = cdn + '&lt;script src="https://ajax.googleapis.com/ajax/libs/mootools/1.5.2/mootools.min.js">&lt;/script>'
-
-						}
-						if (cdn === "" || cdn === "&lt;!-- CDN's from codepack (http://jeffreymeng.github.io/codepack) --><br>") {
-							cdn = "&lt;!-- You did not select anythng --><br>"
-						}
-
-						$("#cdns").empty();
-						$("#cdns").append('<pre class="well">' + cdn + "</pre>")
-					});
-
-});</script>
 </body>
 
 </html>
