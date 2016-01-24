@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,14 +19,16 @@
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+	<!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<style>  .affix {
-	top: 0;
-	width: 100%;
-	}</style>
+	<style>
+		.affix {
+			top: 0;
+			width: 100%;
+		}
+	</style>
 </head>
 
 <body>
@@ -40,6 +42,9 @@
 					<a href="#top">
 						Codepack
 					</a>
+				</li>
+				<li>
+					<a href="#cdn">Get Cdn Code</a>
 				</li>
 				<li>
 					<a href="#bootstrap">Bootstrap</a>
@@ -73,220 +78,230 @@
 					<div class="col-lg-12">
 						<div data-spy="affix">
 							<button href="#menu-toggle" id="menu-toggle" class="btn btn-sucuess" style="background-color:white;margin-top:15px;"><span class="glyphicon glyphicon-menu-hamburger
-								"  aria-hidden="true"></span> Toggle menu</button></div>
-								<br>
-								<br>
-								<div>
-									<h1>Code Pack</h1>
-									<p>code pack is a list the most common CDN's used for html, css, and js.</p>
-									<!-- Target -->
-									 <!-- 1. Define some markup -->
+								" aria-hidden="true"></span> Toggle menu</button>
+						</div>
+						<br>
+						<br>
+						<div>
+							<h1>Code Pack</h1>
+							<p>code pack is a list the most common CDN's used for css and js.</p>
 
 
-									<a data-toggle="collapse" data-target="#disclaimer" aria-expanded="false" aria-controls="disclaimer">Toggle Disclaimer(read and agree to before using)
+
+							<a data-toggle="collapse" data-target="#disclaimer" aria-expanded="false" aria-controls="disclaimer">Toggle Disclaimer(read and agree to before using)
 									</a>
-								</div>
-								<div id="disclaimer" class="collapse">
-									<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garuntey the stablity of the version and although we will try to show the most mature recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b> provided by codepack for any reason, whether comercial, or non-comercial and do not have to do anything for attribution, though we would appreciate it if you kept the attribution header intact. However, The actual code that the cdn leads to is licensed under their respective owners.</p>
-								</div>
+						</div>
+						<div id="disclaimer" class="collapse">
+							<p>Codepack did not create most of the libarys in here, they are still licensed under their respective licenses and by their respective owners. Codepack can not garuntey the stablity of the version and although we will try to show the most mature
+								recent version of the code, codepack can not ensure that they will not cause damage and are provided AS-IS, without warranty of any kind, either express or implied. <b>You may use all cdn code(not the code the cdn leads to but the code in the grey code box)</b>								provided by codepack for any reason, whether comercial, or non-comercial and do not have to do anything for attribution, though we would appreciate it if you kept the attribution header intact. However, The actual code that the cdn leads to is
+								licensed under their respective owners.</p>
+						</div>
 
-								<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
-								<div id="form">
-									<div>
-										<a name="bootstrap"></a>
-										<h3>Bootstrap</h3>
-										<input type="checkbox" id="bootstrap"/>
-										<label for="bootstrap">Bootstrap  (JS, CSS, and optional theme) <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
-										<a data-toggle="collapse" data-target="#extra" aria-expanded="false" aria-controls="extra">
+						<p>Check the checkbox next to each link, then copy and paste the final link at the bottom into the &lt;head> section, right before the first &lt;body> tag</p>
+						<div id="form">
+							<div>
+								<a name="bootstrap"></a>
+								<h3>Bootstrap</h3>
+								<input type="checkbox" id="bootstrap" />
+								<label for="bootstrap">Bootstrap (JS, CSS, and optional theme) <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+								<a data-toggle="collapse" data-target="#extra" aria-expanded="false" aria-controls="extra">
 											Toggle individual components
 										</a>
-										<div id="extra" class="collapse">
-											<ul class="list-group">
-												<li class="list-group-item">
-													<div>
-														<input type="checkbox" id="bootstrapjs"/>
-														<label for="bootstrapjs">Bootstrap JS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
-													</div>  
-												</li>
-												<li class="list-group-item">
-													<div>
-														<input type="checkbox" id="bootstrapcss"/>
-														<label for="bootstrapcss">Bootstrap CSS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
-													</div>
-												</li>
-												<li class="list-group-item">    
-													<div>
-														<input type="checkbox" id="bootstraptheme"/>
-														<label for="bootstraptheme">Bootstrap additional theme <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
-													</div>
-												</li>
-											</div>
-											<a name="jquery"></a>
-
-											<br><h3>jQuery</h3>
+								<div id="extra" class="collapse">
+									<ul class="list-group">
+										<li class="list-group-item">
 											<div>
-												<input type="checkbox" id="jquery"/>
-												<label for="jquery">jQuery 2.1.4 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label>
-												<a data-toggle="collapse" data-target="#extrajquery" aria-expanded="false" aria-controls="extrajquery"> Toggle other CDN providers </a>
-												<div id="extrajquery" class="collapse">
-													<ul class="list-group">
-														<li class="list-group-item"> 
-															<div>
-																<input type="checkbox" id="jquerygoogle"/>
-																<label for="jquerygoogle">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-															</div>    
-															<!-- <a href="">Website</a> | <a href=""> License </a> -->
-														</li>
-														<li class="list-group-item"> 
-															<div>
-																<input type="checkbox" id="jquerymicrosoft"/>
-																<label for="jquerymicrosoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-															</div> 
-														</li>
-														<li class="list-group-item">    
-															<div>
-																<input type="checkbox" id="jquerycdnjs"/>
-																<label for="jquerycdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/2.1.4">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-															</div>
-														</li>
-														<li class="list-group-item"> 
-															<div>
-																<input type="checkbox" id="jqueryjsdelivr"/>
-																<label for="jqueryjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-															</div>
-														</li>
-													</div>
-												</div>
-												<div>
-													<input type="checkbox" id="jquery1"/>
-													<label for="jquery1">jQuery 1.11.3 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label><a data-toggle="collapse" data-target="#extrajquery1" aria-expanded="false" aria-controls="extrajquery1"> Toggle other CDN providers </a>
-													<div id="extrajquery1" class="collapse">
-														<ul class="list-group">
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="jquery1google"/>
-																	<label for="jquery1google">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-																</div> 
-															</li>
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="jquery1microsoft"/>
-																	<label for="jquery1microsoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-																</div> 
-															</li>
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="jquery1cdnjs"/>
-																	<label for="jquery1cdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/1.11.3">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-																</div>
-															</li>
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="jquery1jsdelivr"/>
-																	<label for="jquery1jsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
-																</div>
-															</li>
-														</div>
-													</div>
-													<a name="mootools"></a>
-													<h3>Moo Tools</h3>
-													<input type="checkbox" id="mootoolsgoogle"/>
-													<label for="mootoolsgoogle"> Moo Tools 1.5.2 from Google host( <a href="https://developers.google.com/speed/libraries/#angularjs">website</a> ) because Mootools does not have it's own cdn)<a href="http://mootools.net"> Mootools Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label><a data-toggle="collapse" data-target="#extramootools" aria-expanded="false" aria-controls="extramootools"> Toggle more CDN providers</a>
-													<div id="extramootools" class="collapse">
-														<ul class="list-group">
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="mootoolscdnjs"/>
-																	<label for="mootoolscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label>
-																</div>
-															</li>
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="mootoolsjsdelivr"/>
-																	<label for="mootoolsjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a>
-																</div>
-															</li>
-														</div>
-														<a name="angularjs"></a>
-													<h3>Angular JS</h3>
-													<input type="checkbox" id="angularjs"/>
-													<label for="angularjs"> AngularJS 1.4.2<a href="http://angularjs.org"> Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label><a data-toggle="collapse" data-target="#extraangularjs" aria-expanded="false" aria-controls="extraangularjs"> Toggle more CDN providers</a>
-													<div id="extraangularjs" class="collapse">
-														<ul class="list-group">
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="angularjsgoogle"/>
-																	<label for="angularjsgoogle">Google CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
-																</div>
-															</li>
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="angularjscdnjs"/>
-																	<label for="angularjscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
-																</div>
-															</li>
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="angularjsdeliver"/>
-																	<label for="angularjsdeliver">jsDelivr CDN <b>NOTE: Latest hosted version of Angularjs for jsDelivr is 1.4.7</b> <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a>
-																</div>
-															</li>
-														</div>
-														<div>
-													<a name="prototypejs"></a>
-													<h3>Prototype JS</h3>
-													<input type="checkbox" id="prototypejsgoogle"/>
-													<label for="prototypejsgoogle"> Prototype JS 1.7.2 from google( <a href="https://developers.google.com/speed/libraries/#prototype">website</a> ) because prototype does not have it's own cdn<a href="http://prototypejs.org"> Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a></label><a data-toggle="collapse" data-target="#extraprototypejs" aria-expanded="false" aria-controls="extraprototypejs"> Toggle more CDN providers</a>
-													<div id="extraprototypejs" class="collapse">
-														<ul class="list-group">
-															<li class="list-group-item">   
-																<div>
-																	<input type="checkbox" id="prototypejscdnjs"/>
-																	<label for="prototypejscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/prototype">Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a></label>
-																</div>
-															</li>
-															<li class="list-group-item">
-																<div>
-																	<input type="checkbox" id="prototypejsdelivr"/>
-																	<label for="prototypejsdelivr">jsDelivr CDN <b>NOTE: Latest hosted version of Angularjs for jsDelivr is 1.4.7</b> <a href="http://www.jsdelivr.com/projects/prototypejs">Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a>
-																</div>
-															</li>
-														</div>
-														<div>
-															<input type="checkbox" id="attribution"/>
-															<label for="attribution"> Remove attribution header (you don't have to keep our attribution header, but we would appreciate it if you did by not checking it).</label>
-														</div>
-														<hr>
-														<button id="get" class="form-control btn" style="background-color:green;color:white;">Get the CDN code</button>
-														<hr>
-													</div>
-												</div>
+												<input type="checkbox" id="bootstrapjs" />
+												<label for="bootstrapjs">Bootstrap JS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
 											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="bootstrapcss" />
+												<label for="bootstrapcss">Bootstrap CSS <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="bootstraptheme" />
+												<label for="bootstraptheme">Bootstrap additional theme <a href="https://getbootstrap.com">Website</a> | <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">License</a></label>
+											</div>
+										</li>
+								</div>
+								<a name="jquery"></a>
 
-											<br>
-											<br>
-											<div id="cdns"><pre class="well">&lt;!-- Click the button above me to get your CDN code --></pre></div>
-										</div>
+								<br>
+								<h3>jQuery</h3>
+								<div>
+									<input type="checkbox" id="jquery" />
+									<label for="jquery">jQuery 2.1.4 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label>
+									<a data-toggle="collapse" data-target="#extrajquery" aria-expanded="false" aria-controls="extrajquery"> Toggle other CDN providers </a>
+									<div id="extrajquery" class="collapse">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquerygoogle" />
+													<label for="jquerygoogle">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+												<!-- <a href="">Website</a> | <a href=""> License </a> -->
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquerymicrosoft" />
+													<label for="jquerymicrosoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquerycdnjs" />
+													<label for="jquerycdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/2.1.4">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jqueryjsdelivr" />
+													<label for="jqueryjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
 									</div>
 								</div>
+								<div>
+									<input type="checkbox" id="jquery1" />
+									<label for="jquery1">jQuery 1.11.3 <a href="https://jquery.com">Website</a> | <a href="https://jquery.org/license/">License</a></label><a data-toggle="collapse" data-target="#extrajquery1" aria-expanded="false" aria-controls="extrajquery1"> Toggle other CDN providers </a>
+									<div id="extrajquery1" class="collapse">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquery1google" />
+													<label for="jquery1google">Google CDN <a href="https://developers.google.com/speed/libraries/#jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquery1microsoft" />
+													<label for="jquery1microsoft">Microsoft CDN <a href="http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquery1cdnjs" />
+													<label for="jquery1cdnjs">CDNJS CDN <a href="http://cdnjs.com/libraries/jquery/1.11.3">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="jquery1jsdelivr" />
+													<label for="jquery1jsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/jquery">Website</a> | <a href="https://jquery.org/license/"> License </a></label>
+												</div>
+											</li>
+									</div>
+								</div>
+								<a name="mootools"></a>
+								<h3>Moo Tools</h3>
+								<input type="checkbox" id="mootoolsgoogle" />
+								<label for="mootoolsgoogle"> Moo Tools 1.5.2 from Google host( <a href="https://developers.google.com/speed/libraries/#angularjs">website</a> ) because Mootools does not have it's own cdn)<a href="http://mootools.net"> Mootools Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label>
+								<a data-toggle="collapse" data-target="#extramootools" aria-expanded="false" aria-controls="extramootools"> Toggle more CDN providers</a>
+								<div id="extramootools" class="collapse">
+									<ul class="list-group">
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="mootoolscdnjs" />
+												<label for="mootoolscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a></label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="mootoolsjsdelivr" />
+												<label for="mootoolsjsdelivr">jsDelivr CDN <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="http://opensource.org/licenses/MIT">License: MIT</a>
+											</div>
+										</li>
+								</div>
+								<a name="angularjs"></a>
+								<h3>Angular JS</h3>
+								<input type="checkbox" id="angularjs" />
+								<label for="angularjs"> AngularJS 1.4.2<a href="http://angularjs.org"> Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label><a data-toggle="collapse" data-target="#extraangularjs" aria-expanded="false" aria-controls="extraangularjs"> Toggle more CDN providers</a>
+								<div id="extraangularjs" class="collapse">
+									<ul class="list-group">
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="angularjsgoogle" />
+												<label for="angularjsgoogle">Google CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="angularjscdnjs" />
+												<label for="angularjscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a></label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div>
+												<input type="checkbox" id="angularjsdeliver" />
+												<label for="angularjsdeliver">jsDelivr CDN <b>NOTE: Latest hosted version of Angularjs for jsDelivr is 1.4.7</b> <a href="http://www.jsdelivr.com/projects/mootools">Website</a> | <a href="https://github.com/angular/angular.js/blob/master/LICENSE">License</a>
+											</div>
+										</li>
+								</div>
+								<div>
+									<a name="prototypejs"></a>
+									<h3>Prototype JS</h3>
+									<input type="checkbox" id="prototypejsgoogle" />
+									<label for="prototypejsgoogle"> Prototype JS 1.7.2 from google( <a href="https://developers.google.com/speed/libraries/#prototype">website</a> ) because prototype does not have it's own cdn<a href="http://prototypejs.org"> Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a></label>
+									<a data-toggle="collapse" data-target="#extraprototypejs" aria-expanded="false" aria-controls="extraprototypejs"> Toggle more CDN providers</a>
+									<div id="extraprototypejs" class="collapse">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="prototypejscdnjs" />
+													<label for="prototypejscdnjs">CDNJS CDN <a href="https://cdnjs.com/libraries/prototype">Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a></label>
+												</div>
+											</li>
+											<li class="list-group-item">
+												<div>
+													<input type="checkbox" id="prototypejsdelivr" />
+													<label for="prototypejsdelivr">jsDelivr CDN <b>NOTE: Latest hosted version of Angularjs for jsDelivr is 1.4.7</b> <a href="http://www.jsdelivr.com/projects/prototypejs">Website</a> | <a href="https://github.com/sstephenson/prototype/blob/master/LICENSE">License</a>
+												</div>
+											</li>
+									</div>
+								</div>
+								<h3>Additional Options</h3>
+								<div>
+									<input type="checkbox" id="attribution" checked />
+									<label for="attribution"> Keep attribution header (you don't have to keep our attribution header, but we would appreciate it if you did by keeping this ckecked).</label>
+								</div>
+								<hr>
+								<a name="cdn"></a>
+								<button id="get" class="form-control btn" style="background-color:green;color:white;">Get the CDN code</button>
+								<hr>
 							</div>
 						</div>
+						<br>
+						<br>
+						<div id="cdns"><pre class="well">&lt;!-- Click the button above me to get your CDN code --></pre></div>
 					</div>
-					<!-- /#page-content-wrapper -->
-
 				</div>
-				<!-- /#wrapper -->
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- /#page-content-wrapper -->
 
-				<!-- jQuery -->
-				<script src="js/jquery.js"></script>
-				<script src="js/check.js"></script>
+	</div>
+	<!-- /#wrapper -->
 
-				<!-- Bootstrap Core JavaScript -->
-				<script src="js/bootstrap.min.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.Core.min.js">
-				</script>
-				<!-- Trigger -->
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<script src="js/check.js"></script>
 
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	</script>
+	<!-- Trigger -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
 </body>
 
 </html>
